@@ -13,5 +13,20 @@ namespace ZapateriaJossielito.Controllers
         {
             return View();
         }
+        public ActionResult Login()
+        {
+
+            return View();
+        }
+        public ActionResult Descripcion()
+        {
+
+            return View();
+        }
+        public ActionResult Registro()
+        {
+
+            return View();
+        }
     }
 }
