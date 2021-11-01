@@ -167,6 +167,7 @@
     <Content Include="Views\Zapato\Index.cshtml" />
     <Content Include="Views\Zapato\Login.cshtml" />
     <Content Include="Views\Zapato\Descripcion.cshtml" />
+    <Content Include="Views\Zapato\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

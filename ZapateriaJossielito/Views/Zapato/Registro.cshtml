@@ -3,20 +3,19 @@
     Layout = null;
 }
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="~/Style/Style.css">
+    <link rel="stylesheet" href="Css/Registro.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-
     <div class="encabezado">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(11, 34, 57) ;">
             <div class="container navbar-brand-container">
@@ -62,33 +61,41 @@
         </nav>
     </div>
 
+    <div>
+        <center>
+
+            <div id="registro">
 
 
+                <h3 id="titulo">Registro</h3>
+                <div>
+                    <form>
+                        <div class="mb-3">
+                            <b>
+                                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                                <input type="text" class="form-control-sn" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                            <input type="text" class="form-control-sn" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                            <input type="email" none="email" class="form-control-sn" id="exampleInputEmail1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contrasena</label>
+                            <input type="password" class="form-control-sn" id="exampleInputPassword1">
+                        </div>
 
-
-
-    <div class="principa2">
-
-        <div class="card mb-3">
-            <center>
-                <div class="col-md-6">
-                    <img src="Images/Nike2.jpg" class="img-fluid rounded-start">
+                        <button type="submit" class="btn btn-success" id="Logueo2">Registro</button>
+                        <a class="btn btn-outline-danger" id="Logueo2" href="Login.html" role="button">Cancelar</a>
+                    </form>
+                    </b>
                 </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Nike Sport</h5>
-                        <p class="card-text">Fue creado por el diseñador Bruce Kilgore, fue el primer calzado deportivo de Baloncesto lanzado por Nike que usa la Nike Air.</p>
-                        <a href="#" class="btn btn-primary">Agregar Al Carrito</a>
-
-                    </div>
-                </div>
-            </center>
-        </div>
-
+            </div>
+        </center>
     </div>
-
-
-
 
 
     <footer class="footer_area">
