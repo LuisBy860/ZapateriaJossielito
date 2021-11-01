@@ -1,0 +1,159 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+    <title>Zapateria Jossielito</title>
+    <link rel="stylesheet" href="~/Style/Style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="encabezado">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(11, 34, 57) ;">
+            <div class="container navbar-brand-container">
+                <a class="navbar-brand" href="Index.html"><img src="Images/logo.png"></a>
+                <div class="collapse navbar-collapse" id="Cajados">
+                    <div id="contenedor">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="cajatres">
+                            <li class="nav-item">
+                                <a class="nav-link " id="color" aria-current="page" href="#">Inicio</a>
+                            </li>
+
+                            <li>
+                                <div class="dropdown show">
+                                    <a class="btn btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estilo</a>
+
+                                    <div class="dropdown-menu" id="colormenu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Botas</a>
+                                        <a class="dropdown-item" href="#">Formales</a>
+                                        <a class="dropdown-item" href="#">Deportivos</a>
+                                        <a class="dropdown-item" href="#">Casuales</a>
+                                        <a class="dropdown-item" href="#">Chanclas</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="color" aria-current="page" href="#">Hombre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="color" aria-current="page" href="#">Mujeres</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="color" aria-current="page" href="#"> Quienes Somos?</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="cuenta">¿Tienes una cuenta?</div>
+                <form class="d-flex">
+                    <a class="btn btn-outline-success" id="Logueo" href="Login.html" role="button">Login</a>
+                    <a href="Login.html"><img src="Images/cesta.png" id="cesta"></a>
+                </form>
+
+        </nav>
+    </div>
+
+    <div>
+        <center>
+
+            <div id="registro">
+                <p><img src="Images/login.png" id="imagenlogin" alt=""></p>
+
+                <h3>Bienvenid@</h3>
+                <div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                            <input type="email" none="email" class="form-control-sn" id="exampleInputEmail1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contrasena</label>
+                            <input type="password" class="form-control-sm" id="exampleInputPassword1">
+                        </div>
+                        <b><h7> No Tienes una cuenta?</h7></b>
+                        <p> <a href="Registro.html"> Registrate </a></p>
+
+                        <button type="submit" class="btn btn-success" id="Logueo2">entrar</button>
+                        <a class="btn btn-outline-danger" id="Logueo2" href="Index.html" role="button">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    </div>
+
+
+    <footer class="footer_area">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6" id="CARD1">
+                    <div class="single_ftr">
+                        <h4 class="sf_title">Contactos</h4>
+                        <ul>
+                            <li>El Salvador,Codigo Postal 1301</li>
+                            <li>(+503) 7445-3000 <br> (+503) 7846-5031</li>
+                            <li>JossielitoModa@gmail.com</li>
+                        </ul>
+                    </div>
+                </div> <!--  End Col -->
+
+                <div class="col-md-3 col-sm-6" id="CARD1">
+                    <div class="single_ftr">
+                        <h4 class="sf_title">Informacion</h4>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Hombre</a></li>
+                            <li><a href="#">Mujeres</a></li>
+                            <li><a href="#">Quienes somos?</a></li>
+                        </ul>
+                    </div>
+                </div> <!--  End Col -->
+
+
+
+                <div class="col-md-3 col-sm-6" id="CARD1">
+                    <div class="single_ftr">
+                        <h4 class="sf_title">Dirección</h4>
+                        <div class="newsletter_form">
+                            <p>79 Avenida Norte y Paseo General <br> Escalón, Centro Comercial Orion <br>  Locales 4 - 5  San Salvador, <br> El salvador</p>
+                        </div>
+                    </div>
+                </div> <!--  End Col -->
+
+            </div>
+        </div>
+
+
+        <div class="ftr_btm_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="ftr_social_icon">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="copyright_text text-center">© 2021 Todos los derechos reservados Zapateria Jossielito</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
