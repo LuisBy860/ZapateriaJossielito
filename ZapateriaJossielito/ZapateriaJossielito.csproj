@@ -173,6 +173,10 @@
       <DependentUpon>ZapateriaJossiel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ComprasRepository.cs" />
+    <Compile Include="Repository\DetallesComprasRepository.cs" />
+    <Compile Include="Repository\DetallesVentasRepository.cs" />
+    <Compile Include="Repository\EstilosRepository.cs" />
     <Compile Include="Repository\ProductosRepository.cs" />
     <Compile Include="Repository\UsuariosRepository.cs" />
     <Compile Include="Repository\VentasRepository.cs" />
