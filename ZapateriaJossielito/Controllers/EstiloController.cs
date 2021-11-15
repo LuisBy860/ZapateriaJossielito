@@ -14,6 +14,7 @@ namespace ZapateriaJossielito.Controllers
         Estilos estilos = new Estilos();
 
 
+
         // GET: Estilo
         public ActionResult Index()
         {
@@ -37,6 +38,38 @@ namespace ZapateriaJossielito.Controllers
         {
 
             return View();
+        }
+
+
+
+        public ActionResult Combobox()
+        {
+            var informationEstilo = estilosRepository.ListDataEstilos();
+
+            List<SelectListItem> ComboboxOfEstilos = new List<SelectListItem>();
+
+            foreach (var iteracion in informationEstilo)
+            {
+
+
+                ComboboxOfEstilos.Add(new SelectListItem
+
+
+                {
+                    Text = iteracion.Nombre,
+                    Value = Convert.ToString(iteracion.IdEstilo)
+                }
+      );
+                ViewBag.listofestilocombobox = ComboboxOfEstilos;
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult getcombo(Estilos e)
+        {
+            _ = e;
+            return View("Combobox");
         }
     }
 }

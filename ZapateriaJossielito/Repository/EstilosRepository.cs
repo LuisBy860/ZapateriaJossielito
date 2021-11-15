@@ -38,5 +38,10 @@ namespace ZapateriaJossielito.Repository
             actualizar.Nombre = c.Nombre;
             bd.SaveChanges();
         }
+
+        internal static object ListOfDataOfEstilo()
+        {
+            throw new NotImplementedException();
+        }
     } 
 }
