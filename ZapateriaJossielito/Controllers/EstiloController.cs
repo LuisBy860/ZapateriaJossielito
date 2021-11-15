@@ -31,7 +31,7 @@ namespace ZapateriaJossielito.Controllers
         {
             estilosRepository.Create(estilos);
            
-            return View("RegistradoExito");
+            return View("Index.cshtml");
         }
 
         public ActionResult RegistradoExito()

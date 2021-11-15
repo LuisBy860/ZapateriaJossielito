@@ -1,4 +1,4 @@
-﻿
+﻿@model ZapateriaJossielito.Models.Estilos
 @{
     Layout = null;
 }
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="~/Style/Style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -30,16 +31,21 @@
                             </li>
 
                             <li>
-                                <div class="dropdown show">
-                                    <a class="btn btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estilo</a>
+                                
 
-                                    <div class="dropdown-menu" id="colormenu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Botas</a>
-                                        <a class="dropdown-item" href="#">Formales</a>
-                                        <a class="dropdown-item" href="#">Deportivos</a>
-                                        <a class="dropdown-item" href="#">Casuales</a>
-                                        <a class="dropdown-item" href="#">Chanclas</a>
-                                    </div>
+                                <div>
+                                    @using (Html.BeginForm("getcombo", "Zapato", FormMethod.Post))
+                                    {
+
+
+
+
+                                        @Html.DropDownListFor(a => a.IdEstilo, new SelectList(ViewBag.listofestilocombobox, "Value", "Text"), " Estilos", new { @class = "form-control" })
+
+
+
+
+                                    }
                                 </div>
                             </li>
                             <li class="nav-item">
