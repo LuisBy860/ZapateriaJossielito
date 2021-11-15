@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EstiloController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ZapatoController.cs" />
     <Compile Include="Global.asax.cs">
@@ -246,6 +247,7 @@
     <Content Include="Views\Zapato\Login.cshtml" />
     <Content Include="Views\Zapato\Descripcion.cshtml" />
     <Content Include="Views\Zapato\Registro.cshtml" />
+    <Content Include="Views\Estilo\Registrar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

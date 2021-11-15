@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using ZapateriaJossielito.Models;
+using ZapateriaJossielito.Repository;
+
+namespace ZapateriaJossielito.Controllers
+{
+    public class EstiloController : Controller
+    {
+        EstilosRepository estilosRepository = new EstilosRepository();
+        Estilos estilos = new Estilos();
+
+
+        // GET: Estilo
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Registrar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Registrar(Estilos estilos)
+        {
+            estilosRepository.Create(estilos);
+           
+            return View("RegistradoExito");
+        }
+
+        public ActionResult RegistradoExito()
+        {
+
+            return View();
+        }
+    }
+}
