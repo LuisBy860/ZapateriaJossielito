@@ -180,6 +180,13 @@
     <Compile Include="Repository\ProductosRepository.cs" />
     <Compile Include="Repository\UsuariosRepository.cs" />
     <Compile Include="Repository\VentasRepository.cs" />
+    <Compile Include="Service\ICompras.cs" />
+    <Compile Include="Service\IDetallesCompras.cs" />
+    <Compile Include="Service\IDetallesVentas.cs" />
+    <Compile Include="Service\IEstilos.cs" />
+    <Compile Include="Service\IProductos.cs" />
+    <Compile Include="Service\IUsuarios.cs" />
+    <Compile Include="Service\IVentas.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -242,7 +249,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
