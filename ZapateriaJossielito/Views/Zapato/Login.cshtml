@@ -1,4 +1,4 @@
-﻿
+﻿@model ZapateriaJossielito.Models.Estilos
 @{
     Layout = null;
 }
@@ -26,19 +26,19 @@
                             <li class="nav-item">
                                 <a class="nav-link " id="color" aria-current="page" href="#">Inicio</a>
                             </li>
-
-                            <li>
-                                <div class="dropdown show">
-                                    <a class="btn btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estilo</a>
-
-                                    <div class="dropdown-menu" id="colormenu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Botas</a>
-                                        <a class="dropdown-item" href="#">Formales</a>
-                                        <a class="dropdown-item" href="#">Deportivos</a>
-                                        <a class="dropdown-item" href="#">Casuales</a>
-                                        <a class="dropdown-item" href="#">Chanclas</a>
+                            <div class="dropdown show">
+                                <a class="btn btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estilo</a>
+                                <div class="dropdown-menu" id="colormenu" aria-labelledby="dropdownMenuLink">
+                                    <div class="edicion">
+                                        @using (Html.BeginForm("getcombo", "Zapato", FormMethod.Post))
+                                        {
+                                            @Html.DropDownListFor(a => a.IdEstilo, new SelectList(ViewBag.listofestilocombobox, "Value", "Text"), " Estilos", new { @class = "form-control" })
+                                        }
                                     </div>
                                 </div>
+                            </div>
+                            <li>
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="color" aria-current="page" href="#">Hombre</a>
@@ -79,10 +79,10 @@
                             <input type="password" class="form-control-sm" id="exampleInputPassword1">
                         </div>
                         <b><h7> No Tienes una cuenta?</h7></b>
-                        <p> <a href="Registro.html"> Registrate </a></p>
+                        <p> <a href="Registro"> Registrate </a></p>
 
                         <button type="submit" class="btn btn-success" id="Logueo2">entrar</button>
-                        <a class="btn btn-outline-danger" id="Logueo2" href="Index.html" role="button">Cancelar</a>
+                        <a class="btn btn-outline-danger" id="Logueo2" href="Index" role="button">Cancelar</a>
                     </form>
                 </div>
             </div>

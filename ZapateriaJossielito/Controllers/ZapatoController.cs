@@ -39,7 +39,24 @@ namespace ZapateriaJossielito.Controllers
         }
         public ActionResult Login()
         {
+            var informationEstilo = estilosRepository.ListDataEstilos();
 
+            List<SelectListItem> ComboboxOfEstilos = new List<SelectListItem>();
+
+            foreach (var iteracion in informationEstilo)
+            {
+
+
+                ComboboxOfEstilos.Add(new SelectListItem
+
+
+                {
+                    Text = iteracion.Nombre,
+                    Value = Convert.ToString(iteracion.IdEstilo)
+                }
+      );
+                ViewBag.listofestilocombobox = ComboboxOfEstilos;
+            }
             return View();
         }
         public ActionResult Descripcion()
@@ -49,7 +66,24 @@ namespace ZapateriaJossielito.Controllers
         }
         public ActionResult Registro()
         {
+            var informationEstilo = estilosRepository.ListDataEstilos();
 
+            List<SelectListItem> ComboboxOfEstilos = new List<SelectListItem>();
+
+            foreach (var iteracion in informationEstilo)
+            {
+
+
+                ComboboxOfEstilos.Add(new SelectListItem
+
+
+                {
+                    Text = iteracion.Nombre,
+                    Value = Convert.ToString(iteracion.IdEstilo)
+                }
+      );
+                ViewBag.listofestilocombobox = ComboboxOfEstilos;
+            }
             return View();
         }
         [HttpGet]
@@ -64,7 +98,7 @@ namespace ZapateriaJossielito.Controllers
             estilosRepository.Create(estilos);
 
 
-            return Redirect ("/Zapato/Index");
+            return View ();
         }
 
         public ActionResult RegistradoExito()

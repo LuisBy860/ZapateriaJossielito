@@ -1,4 +1,4 @@
-﻿
+﻿@model ZapateriaJossielito.Models.Estilos
 @{
     Layout = null;
 }
@@ -30,13 +30,13 @@
                             <li>
                                 <div class="dropdown show">
                                     <a class="btn btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estilo</a>
-
                                     <div class="dropdown-menu" id="colormenu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Botas</a>
-                                        <a class="dropdown-item" href="#">Formales</a>
-                                        <a class="dropdown-item" href="#">Deportivos</a>
-                                        <a class="dropdown-item" href="#">Casuales</a>
-                                        <a class="dropdown-item" href="#">Chanclas</a>
+                                        <div class="edicion">
+                                            @using (Html.BeginForm("getcombo", "Zapato", FormMethod.Post))
+                                            {
+                                                @Html.DropDownListFor(a => a.IdEstilo, new SelectList(ViewBag.listofestilocombobox, "Value", "Text"), " Estilos", new { @class = "form-control" })
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -89,7 +89,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-success" id="Logueo2">Registro</button>
-                        <a class="btn btn-outline-danger" id="Logueo2" href="Login.html" role="button">Cancelar</a>
+                        <a class="btn btn-outline-danger" id="Logueo2" href="Login" role="button">Cancelar</a>
                     </form>
                     </b>
                 </div>

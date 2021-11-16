@@ -114,10 +114,14 @@ body {
     background-color: rgb(250, 250, 250);
 }
 
+
+.edicion {
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+}
 /*
 	Carrusel
 */
-
 #carouselExampleIndicators {
     margin: auto;
 }
