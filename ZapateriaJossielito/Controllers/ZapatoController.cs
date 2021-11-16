@@ -61,7 +61,24 @@ namespace ZapateriaJossielito.Controllers
         }
         public ActionResult Descripcion()
         {
+            var informationEstilo = estilosRepository.ListDataEstilos();
 
+            List<SelectListItem> ComboboxOfEstilos = new List<SelectListItem>();
+
+            foreach (var iteracion in informationEstilo)
+            {
+
+
+                ComboboxOfEstilos.Add(new SelectListItem
+
+
+                {
+                    Text = iteracion.Nombre,
+                    Value = Convert.ToString(iteracion.IdEstilo)
+                }
+      );
+                ViewBag.listofestilocombobox = ComboboxOfEstilos;
+            }
             return View();
         }
         public ActionResult Registro()
@@ -98,7 +115,7 @@ namespace ZapateriaJossielito.Controllers
             estilosRepository.Create(estilos);
 
 
-            return View ();
+            return Redirect ("/Zapato/Index");
         }
 
         public ActionResult RegistradoExito()
