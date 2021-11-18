@@ -1,0 +1,47 @@
+﻿@model List<ZapateriaJossielito.Models.Estilos>
+
+@{
+    ViewBag.Title = "ViewEstilo";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<h2>Estilos</h2>
+
+<div>
+   
+    <hr />
+    <table class="table table-dark">
+        <tr>
+
+            <th scope="col">IdEstilo</th>
+
+            <th scope="col">Nombre</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdEstilo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Productos)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.IdEstilo }) |
+                    @Html.ActionLink("Detalle", "Details", new { id = item.IdEstilo }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.IdEstilo })
+                </td>
+            </tr>
+        }
+
+</div>
+<p>
+   
+    @Html.ActionLink("Agregar Estilos", "Registrar", null, new { @class = "btn btn-info" })
+</p>
