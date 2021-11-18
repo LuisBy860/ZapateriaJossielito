@@ -24,6 +24,8 @@ namespace ZapateriaJossielito.Models
         public int IdProducto { get; set; }
         public string Nombre { get; set; }
         public Nullable<decimal> Precio { get; set; }
+        public Nullable<int> Talla { get; set; }
+        public string Color { get; set; }
         public Nullable<int> Existencias { get; set; }
         public int IdEstilo_FK { get; set; }
     

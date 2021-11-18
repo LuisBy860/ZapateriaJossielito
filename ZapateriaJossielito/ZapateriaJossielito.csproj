@@ -149,6 +149,9 @@
     <Compile Include="Models\Productos.cs">
       <DependentUpon>ZapateriaJossiel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Roles.cs">
+      <DependentUpon>ZapateriaJossiel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>ZapateriaJossiel.tt</DependentUpon>
     </Compile>
@@ -200,20 +203,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\ZapateriaJossiel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ZapateriaJossiel.Context.cs</LastGenOutput>
       <DependentUpon>ZapateriaJossiel.edmx</DependentUpon>
+      <LastGenOutput>ZapateriaJossiel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\ZapateriaJossiel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ZapateriaJossiel.edmx</DependentUpon>
       <LastGenOutput>ZapateriaJossiel.cs</LastGenOutput>
-    </Content>
-    <EntityDeploy Include="Models\ZapateriaJossiel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ZapateriaJossiel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ZapateriaJossiel.edmx.diagram">
-      <DependentUpon>ZapateriaJossiel.edmx</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -228,6 +224,13 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="Models\ZapateriaJossiel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ZapateriaJossiel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ZapateriaJossiel.edmx.diagram">
+      <DependentUpon>ZapateriaJossiel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -12,14 +12,18 @@ namespace ZapateriaJossielito.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class DetallesCompras
+    public partial class Roles
     {
-        public int IdDetalleCompra { get; set; }
-        public Nullable<int> Cantidad { get; set; }
-        public int IdProducto_FK { get; set; }
-        public int IdCompra_FK { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Roles()
+        {
+            this.Usuarios = new HashSet<Usuarios>();
+        }
     
-        public virtual Compras Compras { get; set; }
-        public virtual Productos Productos { get; set; }
+        public int IdRol { get; set; }
+        public string NombreRol { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuarios> Usuarios { get; set; }
     }
 }

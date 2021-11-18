@@ -29,7 +29,9 @@ namespace ZapateriaJossielito.Models
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
+        public int IdRol_FK { get; set; }
     
+        public virtual Roles Roles { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ventas> Ventas { get; set; }
     }
