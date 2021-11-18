@@ -18,11 +18,26 @@ namespace ZapateriaJossielito.Controllers
         // GET: Estilo
         public ActionResult Index()
         {
+           
+
             return View();
+         
         }
+
+        public ActionResult ViewEstilo()
+        {
+          
+
+            return View(estilosRepository.ListDataEstilos().AsEnumerable());
+
+        }
+
+       
         [HttpGet]
         public ActionResult Registrar()
         {
+            
+
             return View();
         }
 
@@ -31,9 +46,10 @@ namespace ZapateriaJossielito.Controllers
         {
             estilosRepository.Create(estilos);
            
-            return View("Index.cshtml");
+            return View("ViewEstilo.cshtml");
         }
 
+        
         public ActionResult RegistradoExito()
         {
 
