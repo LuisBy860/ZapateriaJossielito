@@ -260,6 +260,9 @@
     <Content Include="Views\Zapato\Registro.cshtml" />
     <Content Include="Views\Estilo\Registrar.cshtml" />
     <Content Include="Views\Estilo\ViewEstilo.cshtml" />
+    <Content Include="Views\Estilo\ServicioDelete.cshtml" />
+    <Content Include="Views\Estilo\BorradoConExito.cshtml" />
+    <Content Include="Views\Estilo\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

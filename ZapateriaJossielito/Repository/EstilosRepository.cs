@@ -19,7 +19,6 @@ namespace ZapateriaJossielito.Repository
         public void Delete(Estilos c)
         {
             c = bd.Estilos.Find(c.IdEstilo);
-            _ = c;
             bd.Estilos.Remove(c);
             bd.SaveChanges();
         }

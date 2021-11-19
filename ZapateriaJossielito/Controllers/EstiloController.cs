@@ -56,6 +56,42 @@ namespace ZapateriaJossielito.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult ServicioDelete()
+        {
+            return View();
+        }
+        //ServicioDelete
+        [HttpPost]
+        public ActionResult ServicioDelete(Estilos estilo)
+        {
+            try
+            {
+                estilos.IdEstilo = 0;
+               estilosRepository.Delete(estilo);
+            }
+            catch
+            {
+                return Redirect("Error");
+            }
+            return View("BorradoConExito");
+        }
+
+
+
+    
+    public ActionResult BorradoConExito()
+        {
+
+            return View();
+        }
+
+        public ActionResult Error()
+        {
+            return View();
+        }
+
+
 
 
         public ActionResult Combobox()
