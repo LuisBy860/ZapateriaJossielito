@@ -46,7 +46,7 @@ namespace ZapateriaJossielito.Controllers
         {
             estilosRepository.Create(estilos);
 
-            return View("ViewEstilo.cshtml");
+            return Redirect("ViewEstilo");
         }
 
 

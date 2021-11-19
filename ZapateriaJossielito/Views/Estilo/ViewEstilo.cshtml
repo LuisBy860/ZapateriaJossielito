@@ -18,6 +18,7 @@
             <th scope="col">Nombre</th>
         </tr>
 
+
         @foreach (var item in Model)
         {
             <tr>
@@ -40,7 +41,10 @@
             </tr>
         }
 
+
+
 </div>
+
 <p>
 
     @Html.ActionLink("Agregar Estilos", "Registrar", null, new { @class = "btn btn-info" })
