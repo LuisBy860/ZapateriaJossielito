@@ -263,6 +263,7 @@
     <Content Include="Views\Estilo\ServicioDelete.cshtml" />
     <Content Include="Views\Estilo\BorradoConExito.cshtml" />
     <Content Include="Views\Estilo\Error.cshtml" />
+    <Content Include="Views\Estilo\Actualizar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

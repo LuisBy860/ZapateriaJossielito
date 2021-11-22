@@ -67,7 +67,7 @@ namespace ZapateriaJossielito.Controllers
         {
             try
             {
-                estilos.IdEstilo = 0;
+               estilos.IdEstilo = 0;
                estilosRepository.Delete(estilo);
             }
             catch
@@ -122,6 +122,27 @@ namespace ZapateriaJossielito.Controllers
         {
             _ = e;
             return View("Combobox");
+        }
+
+        public ActionResult Actualizar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Actualizar(Estilos estilo)
+        {
+            if (ModelState.IsValid)
+            {
+               //estilo.IdEstilo = 0;
+                estilosRepository.Update(estilo);
+                Estilos actualizar = new Estilos();
+                //estilosRepository.Create(estilos);
+                return Redirect("Actualizar");
+            }
+            else { 
+            return View("ViewEstilo", estilo);
+            }
         }
     }
 }

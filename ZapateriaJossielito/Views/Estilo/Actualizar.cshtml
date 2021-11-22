@@ -1,0 +1,29 @@
+﻿@model ZapateriaJossielito.Models.Estilos
+@{
+    ViewBag.Title = "Actualizar";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Actualizar</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Actualizar", "Estilo", FormMethod.Post))
+        {
+           @* <label>Id</label>
+            @Html.TextBoxFor(a => a.IdEstilo)
+            <br /0>*@
+            <label>Estilo</label>
+            @Html.TextBoxFor(a => a.Nombre)
+            <br />
+            <input type="submit" />
+            @Html.ActionLink("Back to List", "ViewEstilo")
+        }
+
+    </div>
+</body>
+</html>
