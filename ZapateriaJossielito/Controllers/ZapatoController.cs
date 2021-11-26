@@ -155,5 +155,29 @@ namespace ZapateriaJossielito.Controllers
            
             return View("Combobox");
         }
+        public ActionResult Carrito()
+        {
+
+            var informationEstilo = estilosRepository.ListDataEstilos();
+
+            List<SelectListItem> ComboboxOfEstilos = new List<SelectListItem>();
+
+            foreach (var iteracion in informationEstilo)
+            {
+
+
+                ComboboxOfEstilos.Add(new SelectListItem
+
+
+                {
+                    Text = iteracion.Nombre,
+                    Value = Convert.ToString(iteracion.IdEstilo)
+                }
+      );
+                ViewBag.listofestilocombobox = ComboboxOfEstilos;
+            }
+            return View();
+
+        }
     }
 }

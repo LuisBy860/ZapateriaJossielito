@@ -1,0 +1,56 @@
+﻿@model ZapateriaJossielito.Models.Productos
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Registrar</title>
+    </head>
+    <body>
+        <div>
+            <h2>Registrar</h2>
+            @using (Html.BeginForm("Registrar", "Producto", FormMethod.Post))
+
+            {
+
+
+                <br>
+                <label>Nombre</label>
+                @Html.TextBoxFor(a => a.Nombre)
+                <br />
+                <br>
+                <label>precio</label>
+                @Html.TextBoxFor(a => a.Precio)
+                <br />
+                <br>
+                <label>talla</label>
+                @Html.TextBoxFor(a => a.Talla)
+                <br />
+                <br>
+                <label>color</label>
+                @Html.TextBoxFor(a => a.Color)
+                <br />
+                <br>
+                <label>existencia</label>
+                @Html.TextBoxFor(a => a.Existencias)
+                <br />
+                <br>
+                <label>estilo</label>
+                @Html.TextBoxFor(a => a.IdEstilo_FK)
+                <br />
+                <input type="submit" />
+                @Html.ActionLink("Back to List", "ViewProductos")
+
+
+
+            }
+
+
+
+        </div>
+    </body>
+</html>

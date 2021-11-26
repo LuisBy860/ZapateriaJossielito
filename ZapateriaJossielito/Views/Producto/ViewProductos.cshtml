@@ -1,0 +1,69 @@
+﻿@model List<ZapateriaJossielito.Models.Productos>
+
+@{
+    ViewBag.Title = "ViewProductos";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css%22%3E">
+<h2>Estilos</h2>
+
+<div>
+
+    <hr />
+    <table class="table table-dark">
+        <tr>
+
+            <th scope="col">IdEstilo</th>
+
+            <th scope="col">Nombre</th>
+            <th scope="col">precio</th>
+            <th scope="col">talla</th>
+            <th scope="col">color</th>
+            <th scope="col">existencias</th>
+            <th scope="col">Estilo</th>
+        </tr>
+
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Talla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Existencias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEstilo_FK)
+        </td>
+
+        <td>
+            @Html.ActionLink("Editar", "Actualizar", new { id = item.IdProducto }) |
+            @Html.ActionLink("Detalle", "Details", new { id = item.IdProducto }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.IdProducto })
+        </td>
+    </tr>
+        }
+
+
+
+</div>
+@Html.ActionLink("opcion de eliminar", "ServicioDelete")
+
+<p>
+
+    @Html.ActionLink("Agregar Estilos", "Registrar", null, new { @class = "btn btn-info" })
+</p>
