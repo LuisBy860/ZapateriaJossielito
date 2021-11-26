@@ -38,7 +38,8 @@
                                         <div class="edicion">
                                             @using (Html.BeginForm("getcombo", "Zapato", FormMethod.Post))
                                             {
-                                                @Html.DropDownListFor(a => a.IdEstilo, new SelectList(ViewBag.listofestilocombobox, "Value", "Text"), " Estilos", new { @class = "form-control" })
+                                               @Html.DropDownList("miDropDownList", (List<SelectListItem>)ViewBag.listofestilocombobox, new { @class = "form-control" });
+                                        
                                             }
                                         </div>
                                     </div>

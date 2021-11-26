@@ -44,16 +44,21 @@ namespace ZapateriaJossielito.Controllers
             {
                 productosRepository.Create(productos);
 
-                return Redirect("Error");
+                return Redirect("ViewProductos");
             }
             else
             {
-                return View("ViewProductos", productos);
+                return View("Error");
+                
             }
         }
 
+        public ActionResult Error()
+        {
+            return View();
+        }
 
-            public ActionResult RegistradoExito()
+        public ActionResult RegistradoExito()
         {
 
             return View();
