@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EstiloController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VentaController.cs" />
     <Compile Include="Controllers\ZapatoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -264,6 +265,7 @@
     <Content Include="Views\Estilo\BorradoConExito.cshtml" />
     <Content Include="Views\Estilo\Error.cshtml" />
     <Content Include="Views\Estilo\Actualizar.cshtml" />
+    <Content Include="Views\Venta\Carrito.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

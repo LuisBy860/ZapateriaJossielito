@@ -13,10 +13,9 @@
 <body>
     <div>
         @using (Html.BeginForm("Actualizar", "Estilo", FormMethod.Post))
-        {
-           @* <label>Id</label>
+        { <label>Id</label>
             @Html.TextBoxFor(a => a.IdEstilo)
-            <br /0>*@
+            <br/>
             <label>Estilo</label>
             @Html.TextBoxFor(a => a.Nombre)
             <br />

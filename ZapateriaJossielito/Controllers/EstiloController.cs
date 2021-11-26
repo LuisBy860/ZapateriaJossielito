@@ -134,11 +134,11 @@ namespace ZapateriaJossielito.Controllers
         {
             if (ModelState.IsValid)
             {
-               //estilo.IdEstilo = 0;
+                //estilo.IdEstilo = 0;
                 estilosRepository.Update(estilo);
                 Estilos actualizar = new Estilos();
                 //estilosRepository.Create(estilos);
-                return Redirect("Actualizar");
+                return Redirect("Error");
             }
             else { 
             return View("ViewEstilo", estilo);
