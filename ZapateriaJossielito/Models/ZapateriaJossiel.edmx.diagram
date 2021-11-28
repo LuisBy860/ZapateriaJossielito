@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e8e147ba53204820b0930041de15e5d1" Name="Diagram1">
+      <Diagram DiagramId="2d0300ff72154edbbb73d254f8819874" Name="Diagram1">
         <EntityTypeShape EntityType="ZapateriaJossielModel.Compras" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
         <EntityTypeShape EntityType="ZapateriaJossielModel.DetallesCompras" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ZapateriaJossielModel.DetallesVentas" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ZapateriaJossielModel.Estilos" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZapateriaJossielModel.Productos" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZapateriaJossielModel.Productos" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ZapateriaJossielModel.Roles" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ZapateriaJossielModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="ZapateriaJossielModel.Usuarios" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ZapateriaJossielModel.Ventas" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesC__IdCom__2C3393D0" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesC__IdPro__2B3F6F97" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesV__IdPro__36B12243" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesV__IdVen__37A5467C" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__Productos__IdEst__267ABA7A" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__Usuarios__IdRol___30F848ED" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__Ventas__IdUsuari__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesC__IdCom__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesC__IdPro__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesV__IdPro__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesV__IdVen__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__Productos__IdEst__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__Usuarios__IdRol___4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__Ventas__IdUsuari__45F365D3" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
