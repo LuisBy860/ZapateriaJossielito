@@ -156,9 +156,6 @@
     <Compile Include="Models\Roles.cs">
       <DependentUpon>ZapateriaJossiel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>ZapateriaJossiel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Usuarios.cs">
       <DependentUpon>ZapateriaJossiel.tt</DependentUpon>
     </Compile>

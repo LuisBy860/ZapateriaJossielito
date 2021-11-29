@@ -57,16 +57,6 @@
           <Property Name="IdRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NombreRol" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="Usuarios">
           <Key>
             <PropertyRef Name="IdUsuario" />
@@ -90,7 +80,7 @@
           <Property Name="Fecha" Type="datetime" />
           <Property Name="IdUsuario_FK" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__DetallesC__IdCom__3E52440B">
+        <Association Name="FK__DetallesC__IdCom__3F466844">
           <End Role="Compras" Type="Self.Compras" Multiplicity="1" />
           <End Role="DetallesCompras" Type="Self.DetallesCompras" Multiplicity="*" />
           <ReferentialConstraint>
@@ -102,7 +92,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesC__IdPro__3D5E1FD2">
+        <Association Name="FK__DetallesC__IdPro__3E52440B">
           <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
           <End Role="DetallesCompras" Type="Self.DetallesCompras" Multiplicity="*" />
           <ReferentialConstraint>
@@ -114,7 +104,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesV__IdPro__48CFD27E">
+        <Association Name="FK__DetallesV__IdPro__49C3F6B7">
           <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
           <End Role="DetallesVentas" Type="Self.DetallesVentas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -126,7 +116,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesV__IdVen__49C3F6B7">
+        <Association Name="FK__DetallesV__IdVen__4AB81AF0">
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="1" />
           <End Role="DetallesVentas" Type="Self.DetallesVentas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -138,7 +128,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Productos__IdEst__38996AB5">
+        <Association Name="FK__Productos__IdEst__398D8EEE">
           <End Role="Estilos" Type="Self.Estilos" Multiplicity="1" />
           <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -150,7 +140,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__IdRol___4316F928">
+        <Association Name="FK__Usuarios__IdRol___440B1D61">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -162,7 +152,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ventas__IdUsuari__45F365D3">
+        <Association Name="FK__Ventas__IdUsuari__46E78A0C">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -181,34 +171,33 @@
           <EntitySet Name="Estilos" EntityType="Self.Estilos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__DetallesC__IdCom__3E52440B" Association="Self.FK__DetallesC__IdCom__3E52440B">
+          <AssociationSet Name="FK__DetallesC__IdCom__3F466844" Association="Self.FK__DetallesC__IdCom__3F466844">
             <End Role="Compras" EntitySet="Compras" />
             <End Role="DetallesCompras" EntitySet="DetallesCompras" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesC__IdPro__3D5E1FD2" Association="Self.FK__DetallesC__IdPro__3D5E1FD2">
+          <AssociationSet Name="FK__DetallesC__IdPro__3E52440B" Association="Self.FK__DetallesC__IdPro__3E52440B">
             <End Role="Productos" EntitySet="Productos" />
             <End Role="DetallesCompras" EntitySet="DetallesCompras" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesV__IdPro__48CFD27E" Association="Self.FK__DetallesV__IdPro__48CFD27E">
+          <AssociationSet Name="FK__DetallesV__IdPro__49C3F6B7" Association="Self.FK__DetallesV__IdPro__49C3F6B7">
             <End Role="Productos" EntitySet="Productos" />
             <End Role="DetallesVentas" EntitySet="DetallesVentas" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesV__IdVen__49C3F6B7" Association="Self.FK__DetallesV__IdVen__49C3F6B7">
+          <AssociationSet Name="FK__DetallesV__IdVen__4AB81AF0" Association="Self.FK__DetallesV__IdVen__4AB81AF0">
             <End Role="Ventas" EntitySet="Ventas" />
             <End Role="DetallesVentas" EntitySet="DetallesVentas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Productos__IdEst__38996AB5" Association="Self.FK__Productos__IdEst__38996AB5">
+          <AssociationSet Name="FK__Productos__IdEst__398D8EEE" Association="Self.FK__Productos__IdEst__398D8EEE">
             <End Role="Estilos" EntitySet="Estilos" />
             <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__IdRol___4316F928" Association="Self.FK__Usuarios__IdRol___4316F928">
+          <AssociationSet Name="FK__Usuarios__IdRol___440B1D61" Association="Self.FK__Usuarios__IdRol___440B1D61">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ventas__IdUsuari__45F365D3" Association="Self.FK__Ventas__IdUsuari__45F365D3">
+          <AssociationSet Name="FK__Ventas__IdUsuari__46E78A0C" Association="Self.FK__Ventas__IdUsuari__46E78A0C">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Ventas" EntitySet="Ventas" />
           </AssociationSet>
@@ -224,7 +213,7 @@
           </Key>
           <Property Name="IdCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Fecha" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="DetallesCompras" Relationship="Self.FK__DetallesC__IdCom__3E52440B" FromRole="Compras" ToRole="DetallesCompras" />
+          <NavigationProperty Name="DetallesCompras" Relationship="Self.FK__DetallesC__IdCom__3F466844" FromRole="Compras" ToRole="DetallesCompras" />
         </EntityType>
         <EntityType Name="DetallesCompras">
           <Key>
@@ -234,8 +223,8 @@
           <Property Name="Cantidad" Type="Int32" />
           <Property Name="IdProducto_FK" Type="Int32" Nullable="false" />
           <Property Name="IdCompra_FK" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Compras" Relationship="Self.FK__DetallesC__IdCom__3E52440B" FromRole="DetallesCompras" ToRole="Compras" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK__DetallesC__IdPro__3D5E1FD2" FromRole="DetallesCompras" ToRole="Productos" />
+          <NavigationProperty Name="Compras" Relationship="Self.FK__DetallesC__IdCom__3F466844" FromRole="DetallesCompras" ToRole="Compras" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__DetallesC__IdPro__3E52440B" FromRole="DetallesCompras" ToRole="Productos" />
         </EntityType>
         <EntityType Name="DetallesVentas">
           <Key>
@@ -245,8 +234,8 @@
           <Property Name="Cantidad" Type="Int32" />
           <Property Name="IdProducto_FK" Type="Int32" Nullable="false" />
           <Property Name="IdVenta_FK" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK__DetallesV__IdPro__48CFD27E" FromRole="DetallesVentas" ToRole="Productos" />
-          <NavigationProperty Name="Ventas" Relationship="Self.FK__DetallesV__IdVen__49C3F6B7" FromRole="DetallesVentas" ToRole="Ventas" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__DetallesV__IdPro__49C3F6B7" FromRole="DetallesVentas" ToRole="Productos" />
+          <NavigationProperty Name="Ventas" Relationship="Self.FK__DetallesV__IdVen__4AB81AF0" FromRole="DetallesVentas" ToRole="Ventas" />
         </EntityType>
         <EntityType Name="Estilos">
           <Key>
@@ -254,7 +243,7 @@
           </Key>
           <Property Name="IdEstilo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK__Productos__IdEst__38996AB5" FromRole="Estilos" ToRole="Productos" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__Productos__IdEst__398D8EEE" FromRole="Estilos" ToRole="Productos" />
         </EntityType>
         <EntityType Name="Productos">
           <Key>
@@ -268,9 +257,9 @@
           <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Existencias" Type="Int32" />
           <Property Name="IdEstilo_FK" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DetallesCompras" Relationship="Self.FK__DetallesC__IdPro__3D5E1FD2" FromRole="Productos" ToRole="DetallesCompras" />
-          <NavigationProperty Name="DetallesVentas" Relationship="Self.FK__DetallesV__IdPro__48CFD27E" FromRole="Productos" ToRole="DetallesVentas" />
-          <NavigationProperty Name="Estilos" Relationship="Self.FK__Productos__IdEst__38996AB5" FromRole="Productos" ToRole="Estilos" />
+          <NavigationProperty Name="DetallesCompras" Relationship="Self.FK__DetallesC__IdPro__3E52440B" FromRole="Productos" ToRole="DetallesCompras" />
+          <NavigationProperty Name="DetallesVentas" Relationship="Self.FK__DetallesV__IdPro__49C3F6B7" FromRole="Productos" ToRole="DetallesVentas" />
+          <NavigationProperty Name="Estilos" Relationship="Self.FK__Productos__IdEst__398D8EEE" FromRole="Productos" ToRole="Estilos" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -278,17 +267,7 @@
           </Key>
           <Property Name="IdRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NombreRol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__IdRol___4316F928" FromRole="Roles" ToRole="Usuarios" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__IdRol___440B1D61" FromRole="Roles" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -304,8 +283,8 @@
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="IdRol_FK" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Roles" Relationship="Self.FK__Usuarios__IdRol___4316F928" FromRole="Usuarios" ToRole="Roles" />
-          <NavigationProperty Name="Ventas" Relationship="Self.FK__Ventas__IdUsuari__45F365D3" FromRole="Usuarios" ToRole="Ventas" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK__Usuarios__IdRol___440B1D61" FromRole="Usuarios" ToRole="Roles" />
+          <NavigationProperty Name="Ventas" Relationship="Self.FK__Ventas__IdUsuari__46E78A0C" FromRole="Usuarios" ToRole="Ventas" />
         </EntityType>
         <EntityType Name="Ventas">
           <Key>
@@ -314,10 +293,10 @@
           <Property Name="IdVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Fecha" Type="DateTime" Precision="3" />
           <Property Name="IdUsuario_FK" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DetallesVentas" Relationship="Self.FK__DetallesV__IdVen__49C3F6B7" FromRole="Ventas" ToRole="DetallesVentas" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Ventas__IdUsuari__45F365D3" FromRole="Ventas" ToRole="Usuarios" />
+          <NavigationProperty Name="DetallesVentas" Relationship="Self.FK__DetallesV__IdVen__4AB81AF0" FromRole="Ventas" ToRole="DetallesVentas" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Ventas__IdUsuari__46E78A0C" FromRole="Ventas" ToRole="Usuarios" />
         </EntityType>
-        <Association Name="FK__DetallesC__IdCom__3E52440B">
+        <Association Name="FK__DetallesC__IdCom__3F466844">
           <End Role="Compras" Type="Self.Compras" Multiplicity="1" />
           <End Role="DetallesCompras" Type="Self.DetallesCompras" Multiplicity="*" />
           <ReferentialConstraint>
@@ -329,7 +308,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesC__IdPro__3D5E1FD2">
+        <Association Name="FK__DetallesC__IdPro__3E52440B">
           <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
           <End Role="DetallesCompras" Type="Self.DetallesCompras" Multiplicity="*" />
           <ReferentialConstraint>
@@ -341,7 +320,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesV__IdPro__48CFD27E">
+        <Association Name="FK__DetallesV__IdPro__49C3F6B7">
           <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
           <End Role="DetallesVentas" Type="Self.DetallesVentas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -353,7 +332,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DetallesV__IdVen__49C3F6B7">
+        <Association Name="FK__DetallesV__IdVen__4AB81AF0">
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="1" />
           <End Role="DetallesVentas" Type="Self.DetallesVentas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -365,7 +344,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Productos__IdEst__38996AB5">
+        <Association Name="FK__Productos__IdEst__398D8EEE">
           <End Role="Estilos" Type="Self.Estilos" Multiplicity="1" />
           <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -377,7 +356,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuarios__IdRol___4316F928">
+        <Association Name="FK__Usuarios__IdRol___440B1D61">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -389,7 +368,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ventas__IdUsuari__45F365D3">
+        <Association Name="FK__Ventas__IdUsuari__46E78A0C">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -408,34 +387,33 @@
           <EntitySet Name="Estilos" EntityType="Self.Estilos" />
           <EntitySet Name="Productos" EntityType="Self.Productos" />
           <EntitySet Name="Roles" EntityType="Self.Roles" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
           <EntitySet Name="Ventas" EntityType="Self.Ventas" />
-          <AssociationSet Name="FK__DetallesC__IdCom__3E52440B" Association="Self.FK__DetallesC__IdCom__3E52440B">
+          <AssociationSet Name="FK__DetallesC__IdCom__3F466844" Association="Self.FK__DetallesC__IdCom__3F466844">
             <End Role="Compras" EntitySet="Compras" />
             <End Role="DetallesCompras" EntitySet="DetallesCompras" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesC__IdPro__3D5E1FD2" Association="Self.FK__DetallesC__IdPro__3D5E1FD2">
+          <AssociationSet Name="FK__DetallesC__IdPro__3E52440B" Association="Self.FK__DetallesC__IdPro__3E52440B">
             <End Role="Productos" EntitySet="Productos" />
             <End Role="DetallesCompras" EntitySet="DetallesCompras" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesV__IdPro__48CFD27E" Association="Self.FK__DetallesV__IdPro__48CFD27E">
+          <AssociationSet Name="FK__DetallesV__IdPro__49C3F6B7" Association="Self.FK__DetallesV__IdPro__49C3F6B7">
             <End Role="Productos" EntitySet="Productos" />
             <End Role="DetallesVentas" EntitySet="DetallesVentas" />
           </AssociationSet>
-          <AssociationSet Name="FK__DetallesV__IdVen__49C3F6B7" Association="Self.FK__DetallesV__IdVen__49C3F6B7">
+          <AssociationSet Name="FK__DetallesV__IdVen__4AB81AF0" Association="Self.FK__DetallesV__IdVen__4AB81AF0">
             <End Role="Ventas" EntitySet="Ventas" />
             <End Role="DetallesVentas" EntitySet="DetallesVentas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Productos__IdEst__38996AB5" Association="Self.FK__Productos__IdEst__38996AB5">
+          <AssociationSet Name="FK__Productos__IdEst__398D8EEE" Association="Self.FK__Productos__IdEst__398D8EEE">
             <End Role="Estilos" EntitySet="Estilos" />
             <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuarios__IdRol___4316F928" Association="Self.FK__Usuarios__IdRol___4316F928">
+          <AssociationSet Name="FK__Usuarios__IdRol___440B1D61" Association="Self.FK__Usuarios__IdRol___440B1D61">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ventas__IdUsuari__45F365D3" Association="Self.FK__Ventas__IdUsuari__45F365D3">
+          <AssociationSet Name="FK__Ventas__IdUsuari__46E78A0C" Association="Self.FK__Ventas__IdUsuari__46E78A0C">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Ventas" EntitySet="Ventas" />
           </AssociationSet>
@@ -501,17 +479,6 @@
               <MappingFragment StoreEntitySet="Roles">
                 <ScalarProperty Name="IdRol" ColumnName="IdRol" />
                 <ScalarProperty Name="NombreRol" ColumnName="NombreRol" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="ZapateriaJossielModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

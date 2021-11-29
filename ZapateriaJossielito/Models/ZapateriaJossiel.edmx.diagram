@@ -4,23 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2d0300ff72154edbbb73d254f8819874" Name="Diagram1">
+      <Diagram DiagramId="e12d339d10bb4e33bacef82928e8bf30" Name="Diagram1" ZoomLevel="139">
         <EntityTypeShape EntityType="ZapateriaJossielModel.Compras" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZapateriaJossielModel.DetallesCompras" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZapateriaJossielModel.DetallesVentas" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZapateriaJossielModel.Estilos" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZapateriaJossielModel.Productos" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZapateriaJossielModel.DetallesCompras" Width="1.5" PointX="6.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZapateriaJossielModel.DetallesVentas" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZapateriaJossielModel.Estilos" Width="1.5" PointX="2.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZapateriaJossielModel.Productos" Width="1.5" PointX="4.5" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ZapateriaJossielModel.Roles" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZapateriaJossielModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZapateriaJossielModel.Usuarios" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZapateriaJossielModel.Ventas" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesC__IdCom__3E52440B" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesC__IdPro__3D5E1FD2" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesV__IdPro__48CFD27E" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesV__IdVen__49C3F6B7" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__Productos__IdEst__38996AB5" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__Usuarios__IdRol___4316F928" ManuallyRouted="false" />
-        <AssociationConnector Association="ZapateriaJossielModel.FK__Ventas__IdUsuari__45F365D3" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ZapateriaJossielModel.Usuarios" Width="1.5" PointX="3.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZapateriaJossielModel.Ventas" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesC__IdCom__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesC__IdPro__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesV__IdPro__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__DetallesV__IdVen__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__Productos__IdEst__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__Usuarios__IdRol___440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="ZapateriaJossielModel.FK__Ventas__IdUsuari__46E78A0C" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
