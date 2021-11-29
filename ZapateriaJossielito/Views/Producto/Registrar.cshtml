@@ -16,9 +16,9 @@
         @using (Html.BeginForm("Registrar", "Producto", FormMethod.Post))
 
         {
-
-
-            <br>
+            <label>Id Producto</label>
+            @Html.TextBoxFor(a => a.IdProducto)
+            <br />
             <label>Nombre</label>
             @Html.TextBoxFor(a => a.Nombre)
             <br />

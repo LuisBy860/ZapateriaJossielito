@@ -38,20 +38,32 @@ namespace ZapateriaJossielito.Controllers
         }
 
         [HttpPost]
-        public ActionResult Registrar(Productos productos)
+        public ActionResult Registrar(Productos producto)
         {
-            if (ModelState.IsValid /*&& productos.IdEstilo_FK == 0*/)
+            try
             {
-                productosRepository.Create(productos);
-
-                return Redirect("ViewProductos");
+                estilos.IdEstilo = 0;
+                productosRepository.Create(producto);
             }
-            else
+            catch
             {
                 return View("Error");
-                
             }
+            return Redirect("ViewProductos");
+
+
+            //if (ModelState.IsValid /*&& productos.IdEstilo_FK == 0*/)
+            //{
+            //    estilos.IdEstilo = 0;
+            //    productosRepository.Create(productos);
+            //    return View("ViewProductos");
+            //}
+            //else
+            //{
+            //    return View("Error");
+            //}
         }
+
         public ActionResult Actualizar()
         {
             return View();
@@ -60,16 +72,30 @@ namespace ZapateriaJossielito.Controllers
         [HttpPost]
         public ActionResult Actualizar(Productos producto)
         {
-            if (ModelState.IsValid)
+
+            try
             {
+               // productos.IdProducto = 0;
+                estilos.IdEstilo = 0;
                 productosRepository.Update(producto);
                 Productos actualizar = new Productos();
-                return Redirect("Error");
             }
-            else
+            catch
             {
-                return View("ViewEstilo", producto);
+                return View("Error");
             }
+            return Redirect("ViewProductos");
+
+            //if (ModelState.IsValid)
+            //{
+            //    productosRepository.Update(producto);
+            //    Productos actualizar = new Productos();
+            //    return Redirect("Error");
+            //}
+            //else
+            //{
+            //    return View("ViewEstilo", producto);
+            //}
         }
 
         public ActionResult Error()

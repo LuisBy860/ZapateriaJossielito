@@ -34,7 +34,7 @@ namespace ZapateriaJossielito.Repository
         {
             Estilos actualizar = new Estilos();
             actualizar = bd.Estilos.Find(c.IdEstilo);
-          //  actualizar.IdEstilo = c.IdEstilo;
+          //actualizar.IdEstilo = c.IdEstilo;
             actualizar.Nombre = c.Nombre;
             bd.SaveChanges();
         }
