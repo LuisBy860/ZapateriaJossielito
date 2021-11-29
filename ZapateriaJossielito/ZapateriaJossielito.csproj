@@ -149,6 +149,7 @@
     <Compile Include="Models\Estilos.cs">
       <DependentUpon>ZapateriaJossiel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Imagen.cs" />
     <Compile Include="Models\Productos.cs">
       <DependentUpon>ZapateriaJossiel.tt</DependentUpon>
     </Compile>
@@ -271,10 +272,12 @@
     <Content Include="Views\Producto\Registrar.cshtml" />
     <Content Include="Views\Producto\ViewProductos.cshtml" />
     <Content Include="Views\Producto\Error.cshtml" />
+    <Content Include="Views\DatosImg\AgregarIMG.cshtml" />
+    <Content Include="Views\DatosImg\Second.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\DatosImg\" />
+    <Folder Include="Img\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
