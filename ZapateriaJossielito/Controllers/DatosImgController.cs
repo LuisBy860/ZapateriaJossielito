@@ -19,7 +19,7 @@ namespace ZapateriaJossielito.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Imagen imagen)
+        public ActionResult AgregarIMG(Imagen imagen)
         {
             _ = imagen.file;
             String ruta = Server.MapPath("~/Img/");
