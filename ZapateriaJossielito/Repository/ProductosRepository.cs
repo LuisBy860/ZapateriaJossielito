@@ -30,7 +30,16 @@ namespace ZapateriaJossielito.Repository
 
         public void Update(Productos c)
         {
-            throw new NotImplementedException();
+            Productos actualizar = new Productos();
+            actualizar = bd.Productos.Find(c.IdProducto);
+            actualizar.Nombre = c.Nombre;
+            actualizar.Descripcion = c.Descripcion;
+            actualizar.Precio = c.Precio;
+            actualizar.Talla = c.Talla;
+            actualizar.Color = c.Color;
+            actualizar.Existencias = c.Existencias;
+            actualizar.IdEstilo_FK = c.IdEstilo_FK;
+            bd.SaveChanges();
         }
     }
     

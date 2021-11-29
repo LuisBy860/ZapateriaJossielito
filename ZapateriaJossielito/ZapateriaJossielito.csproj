@@ -271,6 +271,7 @@
     <Content Include="Views\Producto\Error.cshtml" />
     <Content Include="Views\DatosImg\AgregarIMG.cshtml" />
     <Content Include="Views\DatosImg\Second.cshtml" />
+    <Content Include="Views\Producto\Actualizar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

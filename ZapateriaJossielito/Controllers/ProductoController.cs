@@ -52,6 +52,25 @@ namespace ZapateriaJossielito.Controllers
                 
             }
         }
+        public ActionResult Actualizar()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public ActionResult Actualizar(Productos producto)
+        {
+            if (ModelState.IsValid)
+            {
+                productosRepository.Update(producto);
+                Productos actualizar = new Productos();
+                return Redirect("Error");
+            }
+            else
+            {
+                return View("ViewEstilo", producto);
+            }
+        }
 
         public ActionResult Error()
         {
