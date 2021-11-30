@@ -18,7 +18,9 @@ namespace ZapateriaJossielito.Repository
 
         public void Delete(Productos c)
         {
-            throw new NotImplementedException();
+            c = bd.Productos.Find(c.IdProducto);
+            bd.Productos.Remove(c);
+            bd.SaveChanges();
         }
 
         public List<Productos> ListDataProductos()

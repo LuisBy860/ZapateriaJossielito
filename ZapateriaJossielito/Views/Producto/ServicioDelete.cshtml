@@ -1,0 +1,26 @@
+﻿@model ZapateriaJossielito.Models.Productos
+@{
+    ViewBag.Title = "ServicioDelete";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ServicioDelete</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ServicioDelete", "Producto", FormMethod.Post))
+        {
+            <label>Coloca el ID del Producto a eliminar</label>
+            @Html.TextBoxFor(c => c.IdProducto)
+            <br />
+            <input type="submit" />
+            @Html.ActionLink("Back to List", "ViewProductos")
+        }
+
+    </div>
+</body>
+</html>

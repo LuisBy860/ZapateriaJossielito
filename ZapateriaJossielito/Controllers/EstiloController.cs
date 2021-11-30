@@ -137,7 +137,6 @@ namespace ZapateriaJossielito.Controllers
                 //estilo.IdEstilo = 0;
                 estilosRepository.Update(estilo);
                 Estilos actualizar = new Estilos();
-                //estilosRepository.Create(estilos);
                 return Redirect("Error");
             }
             else { 

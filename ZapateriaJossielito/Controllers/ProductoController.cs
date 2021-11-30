@@ -68,35 +68,61 @@ namespace ZapateriaJossielito.Controllers
         {
             return View();
         }
-        
+
         [HttpPost]
         public ActionResult Actualizar(Productos producto)
         {
 
-            try
+
+            if (ModelState.IsValid)
             {
-               // productos.IdProducto = 0;
-                estilos.IdEstilo = 0;
                 productosRepository.Update(producto);
                 Productos actualizar = new Productos();
+                
             }
-            catch
+            else
             {
                 return View("Error");
             }
             return Redirect("ViewProductos");
 
-            //if (ModelState.IsValid)
-            //{
-            //    productosRepository.Update(producto);
-            //    Productos actualizar = new Productos();
-            //    return Redirect("Error");
-            //}
-            //else
-            //{
-            //    return View("ViewEstilo", producto);
-            //}
         }
+
+
+
+        //if (ModelState.IsValid)
+        //{
+        //    productosRepository.Update(producto);
+        //    Productos actualizar = new Productos();
+        //    return Redirect("Error");
+        //}
+        //else
+        //{
+        //    return View("ViewEstilo", producto);
+        //}
+       
+
+        [HttpGet]
+        public ActionResult ServicioDelete()
+        {
+            return View();
+        }
+        //ServicioDelete
+        [HttpPost]
+        public ActionResult ServicioDelete(Productos producto)
+        {
+            try
+            {
+
+               productosRepository.Delete(producto);
+            }
+            catch
+            {
+                return View("Error");
+            }
+            return View("BorradoConExito");
+        }
+
 
         public ActionResult Error()
         {
