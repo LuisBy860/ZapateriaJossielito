@@ -8,24 +8,38 @@ namespace ZapateriaJossielito.Repository
 {
     public class DetallesComprasRepository : IDetallesCompras
     {
+        ZapateriaJossielEntities bd = new ZapateriaJossielEntities();
         public void Create(DetallesCompras c)
         {
-            throw new NotImplementedException();
+            bd.DetallesCompras.Add(c);
+            bd.SaveChanges();
+
         }
 
         public void Delete(DetallesCompras c)
         {
-            throw new NotImplementedException();
+            c = bd.DetallesCompras.Find(c.IdDetalleCompra);
+            bd.DetallesCompras.Remove(c);
+            bd.SaveChanges();
         }
 
         public List<DetallesCompras> ListDataDetallesCompras()
         {
-            throw new NotImplementedException();
+            var ListOfDataOfDetalleCompra = bd.DetallesCompras.ToList();
+
+            return ListOfDataOfDetalleCompra;
         }
 
         public void Update(DetallesCompras c)
         {
-            throw new NotImplementedException();
+            DetallesCompras actualizar = new DetallesCompras();
+            actualizar = bd.DetallesCompras.Find(c.IdDetalleCompra);
+            //actualizar.IdDetalleCompra = c.IdDetalleCompra;
+            
+            actualizar.Cantidad = c.Cantidad;
+            actualizar.IdProducto_FK = c.IdProducto_FK;
+            actualizar.IdCompra_FK = c.IdCompra_FK;
+            bd.SaveChanges();
         }
     }
 }

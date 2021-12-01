@@ -9,24 +9,34 @@ namespace ZapateriaJossielito.Repository
 {
     public class VentasRepository : IVentas
     {
+        ZapateriaJossielEntities bd = new ZapateriaJossielEntities();
         public void Create(Ventas c)
         {
-            throw new NotImplementedException();
+            bd.Ventas.Add(c);
+            bd.SaveChanges();
         }
 
         public void Delete(Ventas c)
         {
-            throw new NotImplementedException();
+            c = bd.Ventas.Find(c.IdVenta);
+            bd.Ventas.Remove(c);
+            bd.SaveChanges();
         }
 
         public List<Ventas> ListDataVentas()
         {
-            throw new NotImplementedException();
+            var ListOfDataOfVentas= bd.Ventas.ToList();
+
+            return ListOfDataOfVentas;
         }
 
         public void Update(Ventas c)
         {
-            throw new NotImplementedException();
+            Ventas actualizar = new Ventas();
+            actualizar = bd.Ventas.Find(c.IdVenta);
+            actualizar.Fecha = c.Fecha;
+            actualizar.IdUsuario_FK = c.IdUsuario_FK;         
+            bd.SaveChanges();
         }
     }
 }
