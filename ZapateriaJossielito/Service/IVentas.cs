@@ -9,6 +9,13 @@ namespace ZapateriaJossielito.Service
 {
     interface IVentas
     {
-      
+        void Create(Ventas c);
+
+        void Update(Ventas c);
+
+        void Delete(Ventas c);
+
+        List<Ventas>ListDataVentas();
+
     }
 }
