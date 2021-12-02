@@ -1,28 +1,44 @@
 ﻿@model ZapateriaJossielito.Models.Estilos
 @{
     ViewBag.Title = "Actualizar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Actualizar</title>
-</head>
-<body>
-    <div>
-        @using (Html.BeginForm("Actualizar", "Estilo", FormMethod.Post))
-        { <label>Id</label>
-            @Html.TextBoxFor(a => a.IdEstilo)
-            <br/>
-            <label>Estilo</label>
-            @Html.TextBoxFor(a => a.Nombre)
-            <br />
-            <input type="submit" />
-            @Html.ActionLink("Back to List", "ViewEstilo")
-        }
 
-    </div>
-</body>
-</html>
+
+
+
+<div class="form-horizontal">
+    <h4>Estilos</h4>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.IdEstilo)
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Guardar" class="btn btn-default" />
+
+
+
+
+                </div>
+
+            </div>
+
+
+}
+    
+        @Html.ActionLink("Back to List", "ViewEstilo")
+   

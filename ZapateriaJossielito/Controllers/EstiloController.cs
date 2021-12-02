@@ -124,9 +124,26 @@ namespace ZapateriaJossielito.Controllers
             return View("Combobox");
         }
 
-        public ActionResult Actualizar()
+        public ActionResult Actualizar(int id)
         {
-            return View();
+            var act = estilosRepository.ListDataEstilos().OrderBy(s => s.IdEstilo == id).ToList();
+            var model = new Estilos();
+            foreach (var item in act)
+            {
+
+
+                 model = new Estilos {
+
+                    IdEstilo = item.IdEstilo,
+                    Nombre = item.Nombre
+                    
+                     
+
+            };
+
+            }
+            return View(model);
+           
         }
 
         [HttpPost]
@@ -137,7 +154,9 @@ namespace ZapateriaJossielito.Controllers
                 //estilo.IdEstilo = 0;
                 estilosRepository.Update(estilo);
                 Estilos actualizar = new Estilos();
-                return Redirect("Error");
+               // return Redirect("Error");
+                return RedirectToAction("ViewEstilo");
+
             }
             else { 
             return View("ViewEstilo", estilo);
