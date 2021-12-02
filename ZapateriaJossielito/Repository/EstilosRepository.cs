@@ -39,9 +39,6 @@ namespace ZapateriaJossielito.Repository
             bd.SaveChanges();
         }
 
-        internal static object ListOfDataOfEstilo()
-        {
-            throw new NotImplementedException();
-        }
+       
     } 
 }

@@ -64,28 +64,52 @@ namespace ZapateriaJossielito.Controllers
             //}
         }
 
-        public ActionResult Actualizar()
+
+      
+        public ActionResult Actualizar(int id)
         {
-            return View();
+
+            var act = productosRepository.ListDataProductos().OrderBy(s => s.IdProducto == id).ToList();
+            var model = new Productos();
+            foreach (var item in act)
+            {
+
+
+                model = new Productos
+                {
+
+                    IdProducto = item.IdProducto,
+                    Nombre = item.Nombre,
+                    Descripcion = item.Descripcion,
+                    Precio = item.Precio,
+                    Talla = item.Talla,
+                    Color = item.Color,
+                    Existencias = item.Existencias,
+                   IdEstilo_FK = item.IdEstilo_FK
+
+
+
+                };
+
+            }
+            return View(model);
         }
+
 
         [HttpPost]
         public ActionResult Actualizar(Productos producto)
         {
 
-
             if (ModelState.IsValid)
             {
                 productosRepository.Update(producto);
                 Productos actualizar = new Productos();
-                
+                return RedirectToAction("ViewProductos");
             }
             else
             {
-                return View("Error");
+                return View("ViewProductos", producto);
             }
-            return Redirect("ViewProductos");
-
         }
 
 
@@ -100,7 +124,7 @@ namespace ZapateriaJossielito.Controllers
         //{
         //    return View("ViewEstilo", producto);
         //}
-       
+
 
         [HttpGet]
         public ActionResult ServicioDelete()
