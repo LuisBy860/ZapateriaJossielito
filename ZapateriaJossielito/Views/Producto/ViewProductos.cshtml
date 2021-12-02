@@ -17,10 +17,10 @@
 
             <th scope="col">Nombre</th>
             <th scope="col">Descripcion</th>
-            <th scope="col">precio</th>
-            <th scope="col">talla</th>
-            <th scope="col">color</th>
-            <th scope="col">existencias</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Talla</th>
+            <th scope="col">Color</th>
+            <th scope="col">Existencias</th>
             <th scope="col">Estilo</th>
         </tr>
 
@@ -57,7 +57,7 @@
         <td>
             @Html.ActionLink("Editar", "Actualizar", new { id = item.IdProducto }) |
             @Html.ActionLink("Detalle", "Details", new { id = item.IdProducto }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id = item.IdProducto })
+            @Html.ActionLink("Eliminar", "ServicioDelete", new { id = item.IdProducto })
         </td>
     </tr>
         }
@@ -65,9 +65,15 @@
 
 
 </div>
-@Html.ActionLink("opcion de eliminar", "ServicioDelete")
 
 <p>
+    @Html.ActionLink("Opción de eliminar", "ServicioDelete", null, new { @class = "btn btn-danger" })
+</p>
 
-    @Html.ActionLink("Agregar Productos", "Registrar", null, new { @class = "btn btn-info" })
+<p>
+    @Html.ActionLink("Agregar Productos", "Registrar", null, new { @class = "btn btn-success" })
+</p>
+
+<p>  
+    @Html.ActionLink("Ver Estilos", "ViewEstilo", "Estilo", null, new { @class = "btn btn-info" })
 </p>

@@ -44,9 +44,15 @@
 
 
 </div>
-@Html.ActionLink("opcion de eliminar", "ServicioDelete")
-
 <p>
 
-    @Html.ActionLink("Agregar Estilos", "Registrar", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Opción de eliminar", "ServicioDelete", null, new { @class = "btn btn-danger" })
+</p>
+<p>
+
+    @Html.ActionLink("Agregar Estilos", "Registrar", null, new { @class = "btn btn-success" })
+</p>
+<p>
+
+    @Html.ActionLink("Ver Productos", "ViewProductos", "Producto", null, new { @class = "btn btn-info" })
 </p>
