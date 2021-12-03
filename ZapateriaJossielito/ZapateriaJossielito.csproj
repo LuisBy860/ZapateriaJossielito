@@ -274,6 +274,11 @@
     <Content Include="Views\Producto\Actualizar.cshtml" />
     <Content Include="Views\Producto\ServicioDelete.cshtml" />
     <Content Include="Views\Producto\BorradoConExito.cshtml" />
+    <Content Include="Views\Venta\ViewVentas.cshtml" />
+    <Content Include="Views\Venta\Registrar.cshtml" />
+    <Content Include="Views\Venta\Error.cshtml" />
+    <Content Include="Views\Venta\DeleteVenta.cshtml" />
+    <Content Include="Views\Venta\Actualizar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
