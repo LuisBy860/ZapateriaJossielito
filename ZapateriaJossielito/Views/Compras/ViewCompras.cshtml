@@ -1,0 +1,55 @@
+﻿@model List<ZapateriaJossielito.Models.Compras>
+
+@{
+    ViewBag.Title = "ViewCompras";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css%22%3E">
+<h2>Compras</h2>
+
+<div>
+
+    <hr />
+    <table class="table table-dark">
+        <tr>
+
+            <th scope="col">IdCompra</th>
+
+            <th scope="col">Fecha</th>
+        </tr>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdCompra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+
+                @* <td>
+                        @Html.DisplayFor(modelItem => item.Productos)
+                    </td> *@
+
+                <td>
+                    @Html.ActionLink("Editar", "Actualizar", new { id = item.IdCompra }, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Detalle", "Details", new { id = item.IdCompra }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Eliminar", "ServicioDelete", new { id = item.IdCompra }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+
+
+</div>
+
+<p>
+
+    @Html.ActionLink("Agregar Compra", "Registrar", null, new { @class = "btn btn-success" })
+</p>
+<p>
+
+    @Html.ActionLink("Ver Productos", "ViewProductos", "Producto", null, new { @class = "btn btn-warning" })
+</p>

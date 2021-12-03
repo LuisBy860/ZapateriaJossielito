@@ -15,6 +15,9 @@ namespace ZapateriaJossielito.Controllers
 
         EstilosRepository estilosRepository = new EstilosRepository();
         Estilos estilos = new Estilos();
+
+        ComprasRepository ComprasRepository = new ComprasRepository();
+        Compras Compras = new Compras();
         // GET: Producto
         public ActionResult Index()
         {
