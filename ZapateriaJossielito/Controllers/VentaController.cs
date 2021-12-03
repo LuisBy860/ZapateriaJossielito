@@ -10,11 +10,11 @@ namespace ZapateriaJossielito.Controllers
 {
     public class VentaController : Controller
     {
-        VentasRepository ventasRepository = new VentasRepository();
+        ProductosRepository productosRepository = new ProductosRepository();
         Productos productos = new Productos();
 
-        VentasRepository ventaRepository = new VentasRepository();
-        Ventas ventas = new Ventas();
+        EstilosRepository estilosRepository = new EstilosRepository();
+        Estilos estilos = new Estilos();
 
         ComprasRepository ComprasRepository = new ComprasRepository();
         Compras Compras = new Compras();
@@ -25,106 +25,30 @@ namespace ZapateriaJossielito.Controllers
         }
         public ActionResult Carrito()
         {
-            return View();
-        }
 
-        public ActionResult ViewVentas()
-        {
+            var informationEstilo = estilosRepository.ListDataEstilos();
 
+            List<SelectListItem> ComboboxOfEstilos = new List<SelectListItem>();
 
-            return View(ventasRepository.ListDataVentas().AsEnumerable());
-
-        }
-
-       public ActionResult Registrar()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Registrar(Ventas venta)
-        {
-            try
-            {
-                venta.IdVenta = 0;
-                ventasRepository.Create(venta);
-            }
-            catch
-            {
-                return View("Error");
-            }
-            return Redirect("ViewVentas");
-
-
-          
-        }
-        public ActionResult Actualizar(int id)
-        {
-
-            var act = ventaRepository.ListDataVentas().OrderBy(s => s.IdVenta == id).ToList();
-            var model = new Ventas();
-            foreach (var item in act)
+            foreach (var iteracion in informationEstilo)
             {
 
 
-                model = new Ventas
+                ComboboxOfEstilos.Add(new SelectListItem
+
+
                 {
-
-                    IdVenta = item.IdVenta,
-                    IdUsuario_FK = item.IdUsuario_FK,
-                 
-
-
-                };
-
+                    Text = iteracion.Nombre,
+                    Value = Convert.ToString(iteracion.IdEstilo)
+                }
+      );
+                ViewBag.listofestilocombobox = ComboboxOfEstilos;
             }
-            return View(model);
-        }
-
-
-        [HttpPost]
-        public ActionResult Actualizar(Ventas venta)
-        {
-
-            if (ModelState.IsValid)
-            {
-                ventasRepository.Update(venta);
-                Ventas actualizar = new Ventas();
-                return RedirectToAction("ViewVentas");
-            }
-            else
-            {
-                return View("ViewVentas", venta);
-            }
-        }
-
-
-        [HttpGet]
-        public ActionResult DeleteVenta()
-        {
             return View();
+        
         }
-        //ServicioDelete
-        [HttpPost]
-        public ActionResult DeleteVenta(Ventas venta)
-        {
-            try
-            {
+        
 
-                ventasRepository.Delete(venta);
-            }
-            catch
-            {
-                return View("Error");
-            }
-            return View("BorradoConExito");
-        }
-
-
-        public ActionResult Error()
-        {
-            return View();
-        }
 
 
     }
