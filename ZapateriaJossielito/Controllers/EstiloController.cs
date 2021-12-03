@@ -57,9 +57,26 @@ namespace ZapateriaJossielito.Controllers
         }
 
         [HttpGet]
-        public ActionResult ServicioDelete()
+        public ActionResult ServicioDelete(int id)
         {
-            return View();
+            var act = estilosRepository.ListDataEstilos().OrderBy(s => s.IdEstilo == id).ToList();
+            var model = new Estilos();
+            foreach (var item in act)
+            {
+
+
+                model = new Estilos
+                {
+
+                    IdEstilo = item.IdEstilo,
+                    Nombre = item.Nombre
+
+
+
+                };
+
+            }
+            return View(model);
         }
         //ServicioDelete
         [HttpPost]

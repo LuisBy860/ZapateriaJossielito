@@ -34,9 +34,9 @@
                 </td> *@
 
                 <td>
-                    @Html.ActionLink("Editar", "Actualizar", new { id = item.IdEstilo }) |
-                    @Html.ActionLink("Detalle", "Details", new { id = item.IdEstilo }) |
-                    @Html.ActionLink("Eliminar", "ServicioDelete", new { id = item.IdEstilo })
+                    @Html.ActionLink("Editar", "Actualizar", new { id = item.IdEstilo }, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Detalle", "Details", new { id = item.IdEstilo }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Eliminar", "ServicioDelete", new { id = item.IdEstilo }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }
@@ -44,15 +44,12 @@
 
 
 </div>
-<p>
 
-    @Html.ActionLink("Opción de eliminar", "ServicioDelete", null, new { @class = "btn btn-danger" })
-</p>
 <p>
 
     @Html.ActionLink("Agregar Estilos", "Registrar", null, new { @class = "btn btn-success" })
 </p>
 <p>
 
-    @Html.ActionLink("Ver Productos", "ViewProductos", "Producto", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Ver Productos", "ViewProductos", "Producto", null, new { @class = "btn btn-warning" })
 </p>
