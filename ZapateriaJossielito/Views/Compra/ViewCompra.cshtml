@@ -5,7 +5,7 @@
 }
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css%22%3E">
-<h2>Compras</h2>
+<h2>Ventas</h2>
 
 <div>
 
@@ -16,6 +16,8 @@
             <th scope="col">IdCompra</th>
 
             <th scope="col">Fecha</th>
+
+         
         </tr>
 
 
@@ -29,10 +31,7 @@
                     @Html.DisplayFor(modelItem => item.Fecha)
                 </td>
 
-                @* <td>
-                        @Html.DisplayFor(modelItem => item.Productos)
-                    </td> *@
-
+                 <
                 <td>
                     @Html.ActionLink("Editar", "Actualizar", new { id = item.IdCompra }, new { @class = "btn btn-success" }) |
                     @Html.ActionLink("Detalle", "Details", new { id = item.IdCompra }, new { @class = "btn btn-info" }) |
@@ -51,5 +50,5 @@
 </p>
 <p>
 
-    @Html.ActionLink("Ver Productos", "ViewProductos", "Producto", null, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Ver Compras", "ViewRegistrar", "Compra", null, new { @class = "btn btn-warning" })
 </p>

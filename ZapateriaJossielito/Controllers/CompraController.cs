@@ -16,8 +16,8 @@ namespace ZapateriaJossielito.Controllers
         EstilosRepository estilosRepository = new EstilosRepository();
         Estilos estilos = new Estilos();
 
-        ComprasRepository ComprasRepository = new ComprasRepository();
-        Compras Compras = new Compras();
+        ComprasRepository comprasRepository = new ComprasRepository();
+        Compras compras = new Compras();
 
         // GET: Venta
         public ActionResult Index()
@@ -48,6 +48,13 @@ namespace ZapateriaJossielito.Controllers
             return View();
 
         }
+        public ActionResult ViewCompra()
+        {
+
+
+            return View(comprasRepository.ListDataCompras().AsEnumerable());
+
+        }
 
         [HttpGet]
         public ActionResult Registrar()
@@ -58,11 +65,11 @@ namespace ZapateriaJossielito.Controllers
         }
 
         [HttpPost]
-        public ActionResult Registrar(Estilos estilos)
+        public ActionResult Registrar(Compras compras)
         {
-            estilosRepository.Create(estilos);
+            comprasRepository.Create(compras);
 
-            return Redirect("ViewEstilo");
+            return Redirect("ViewCompra");
         }
 
 
@@ -75,17 +82,17 @@ namespace ZapateriaJossielito.Controllers
         [HttpGet]
         public ActionResult ServicioDelete(int id)
         {
-            var act = estilosRepository.ListDataEstilos().OrderBy(s => s.IdEstilo == id).ToList();
-            var model = new Estilos();
+            var act = comprasRepository.ListDataCompras().OrderBy(s => s.IdCompra == id).ToList();
+            var model = new Compras();
             foreach (var item in act)
             {
 
 
-                model = new Estilos
+                model = new Compras
                 {
 
-                    IdEstilo = item.IdEstilo,
-                    Nombre = item.Nombre
+                    IdCompra = item.IdCompra,
+                    Fecha = item.Fecha
 
 
 
@@ -96,12 +103,12 @@ namespace ZapateriaJossielito.Controllers
         }
         //ServicioDelete
         [HttpPost]
-        public ActionResult ServicioDelete(Estilos estilo)
+        public ActionResult ServicioDelete(Compras compras)
         {
             try
             {
-                estilos.IdEstilo = 0;
-                estilosRepository.Delete(estilo);
+                compras.IdCompra = 0;
+                comprasRepository.Delete(compras);
             }
             catch
             {

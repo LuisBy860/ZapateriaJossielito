@@ -128,7 +128,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\DatosImgController.cs" />
+    <Compile Include="Controllers\DetalleCompraController.cs" />
     <Compile Include="Controllers\EstiloController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
@@ -279,6 +281,16 @@
     <Content Include="Views\Venta\Error.cshtml" />
     <Content Include="Views\Venta\DeleteVenta.cshtml" />
     <Content Include="Views\Venta\Actualizar.cshtml" />
+    <Content Include="Views\Compra\Actualizar.cshtml" />
+    <Content Include="Views\Compra\DeleteCompra.cshtml" />
+    <Content Include="Views\Compra\Error.cshtml" />
+    <Content Include="Views\Compra\Registrar.cshtml" />
+    <Content Include="Views\Compra\ViewCompra.cshtml" />
+    <Content Include="Views\DetalleCompra\Actualizar.cshtml" />
+    <Content Include="Views\DetalleCompra\DeleteCompra.cshtml" />
+    <Content Include="Views\DetalleCompra\Error.cshtml" />
+    <Content Include="Views\DetalleCompra\Registrar.cshtml" />
+    <Content Include="Views\DetalleCompra\ViewDetalleCompra.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
