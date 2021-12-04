@@ -35,7 +35,7 @@
                 <td>
                     @Html.ActionLink("Editar", "Actualizar", new { id = item.IdCompra }, new { @class = "btn btn-success" }) |
                     @Html.ActionLink("Detalle", "Details", new { id = item.IdCompra }, new { @class = "btn btn-info" }) |
-                    @Html.ActionLink("Eliminar", "ServicioDelete", new { id = item.IdCompra }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Eliminar", "DeleteCompra", new { id = item.IdCompra }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }
@@ -46,7 +46,7 @@
 
 <p>
 
-    @Html.ActionLink("Agregar Compra", "Registrar", null, new { @class = "btn btn-success" })
+    @Html.ActionLink("Agregar Fecha De Compra", "Registrar", null, new { @class = "btn btn-success" })
 </p>
 <p>
 

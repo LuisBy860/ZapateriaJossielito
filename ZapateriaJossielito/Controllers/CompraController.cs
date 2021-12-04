@@ -65,9 +65,9 @@ namespace ZapateriaJossielito.Controllers
         }
 
         [HttpPost]
-        public ActionResult Registrar(Compras compras)
+        public ActionResult Registrar(Compras compra)
         {
-            comprasRepository.Create(compras);
+            comprasRepository.Create(compra);
 
             return Redirect("ViewCompra");
         }
@@ -80,7 +80,7 @@ namespace ZapateriaJossielito.Controllers
         }
 
         [HttpGet]
-        public ActionResult ServicioDelete(int id)
+        public ActionResult DeleteCompra(int id)
         {
             var act = comprasRepository.ListDataCompras().OrderBy(s => s.IdCompra == id).ToList();
             var model = new Compras();
@@ -103,7 +103,7 @@ namespace ZapateriaJossielito.Controllers
         }
         //ServicioDelete
         [HttpPost]
-        public ActionResult ServicioDelete(Compras compras)
+        public ActionResult DeleteCompra(Compras compras)
         {
             try
             {

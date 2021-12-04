@@ -16,30 +16,31 @@
     <div class="form-horizontal">
         <h2>Registrar</h2>
 
-        @using (Html.BeginForm("Registrar", "DetallesCompras", FormMethod.Post))
+        @using (Html.BeginForm("Registrar", "DetalleCompra", FormMethod.Post))
 
         {
             <div class="caja" style="margin-left:100px">
                 <form>
-                    <label><b>Detalles Compras</b></label>
-                    <div class="form-group">
+                    @Html.TextBoxFor(a => a.Cantidad)
 
-                        @Html.TextBoxFor(a => a.IdDetalleCompra)
-                    </div>
                     <label><b>Cantidad</b></label>
                     <div class="form-group">
 
-                        @Html.TextBoxFor(a => a.Cantidad)
+
                     </div>
+                    @Html.TextBoxFor(a => a.IdProducto_FK)
+
                     <label><b>Producto</b></label>
                     <div class="form-group">
 
-                        @Html.TextBoxFor(a => a.IdProducto_FK)
+
                     </div>
+                    @Html.TextBoxFor(a => a.IdCompra_FK)
+
                     <label><b>Compra</b></label>
                     <div class="form-group">
 
-                        @Html.TextBoxFor(a => a.IdCompra_FK)
+
                     </div>
 
 

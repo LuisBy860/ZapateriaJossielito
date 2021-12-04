@@ -44,7 +44,7 @@
             <td>
                 @Html.ActionLink("Editar", "Actualizar", new { id = item.IdDetalleCompra }, new { @class = "btn btn-success" }) |
                 @Html.ActionLink("Detalle", "Details", new { id = item.IdDetalleCompra }, new { @class = "btn btn-info" }) |
-                @Html.ActionLink("Eliminar", "ServicioDelete", new { id = item.IdDetalleCompra }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Eliminar", "DeleteCompra", new { id = item.IdDetalleCompra }, new { @class = "btn btn-danger" })
             </td>
         </tr>
         }

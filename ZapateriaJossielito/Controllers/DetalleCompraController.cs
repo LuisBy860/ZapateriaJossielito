@@ -83,7 +83,7 @@ namespace ZapateriaJossielito.Controllers
         {
             try
             {
-                IdDetalleCompra.IdDetalleCompra = 0;
+                //IdDetalleCompra.IdDetalleCompra = 0;
                 DetallesComprasRepository.Delete(IdDetalleCompra);
             }
             catch
