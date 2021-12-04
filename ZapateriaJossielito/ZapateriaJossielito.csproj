@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\DatosImgController.cs" />
     <Compile Include="Controllers\DetalleCompraController.cs" />
+    <Compile Include="Controllers\DetalleVentaController.cs" />
     <Compile Include="Controllers\EstiloController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
@@ -291,6 +292,12 @@
     <Content Include="Views\DetalleCompra\Error.cshtml" />
     <Content Include="Views\DetalleCompra\Registrar.cshtml" />
     <Content Include="Views\DetalleCompra\ViewDetalleCompra.cshtml" />
+    <Content Include="Views\DetalleVenta\RegistrarDetalles.cshtml" />
+    <Content Include="Views\DetalleVenta\ActualizarDetalles.cshtml" />
+    <Content Include="Views\DetalleVenta\DeleteDetallesVenta.cshtml" />
+    <Content Include="Views\DetalleVenta\Error.cshtml" />
+    <Content Include="Views\DetalleVenta\BorradoConExito.cshtml" />
+    <Content Include="Views\DetalleVenta\ViewDetallesVentas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
